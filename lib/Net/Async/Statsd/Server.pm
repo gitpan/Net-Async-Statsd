@@ -1,5 +1,5 @@
 package Net::Async::Statsd::Server;
-$Net::Async::Statsd::Server::VERSION = '0.001';
+$Net::Async::Statsd::Server::VERSION = '0.002';
 use strict;
 use warnings;
 
@@ -11,7 +11,7 @@ Net::Async::Statsd::Server - asynchronous server for Etsy's statsd protocol
 
 =head1 VERSION
 
-version 0.001
+Version 0.002
 
 =head1 SYNOPSIS
 

@@ -6,6 +6,8 @@ at lib/Net/Async/Statsd/Bus.pm
 If you do edit this file, and don't want your changes to be removed, make
 sure you change the first line.
 
+=encoding utf8
+
 =cut
 
 =head1 NAME
@@ -14,7 +16,7 @@ Net::Async::Statsd::Bus - event handling object
 
 =head1 VERSION
 
-version 0.001
+Version 0.002
 
 =head1 DESCRIPTION
 

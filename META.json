@@ -37,6 +37,7 @@
          "requires" : {
             "Future" : "0.29",
             "IO::Async" : "0.62",
+            "IO::Socket::IP" : "0",
             "Mixin::Event::Dispatch" : "1.000",
             "Socket" : "2.000",
             "curry" : "0",
@@ -62,6 +63,6 @@
       },
       "homepage" : "http://search.cpan.org/dist/Net-Async-Statsd/"
    },
-   "version" : "0.001"
+   "version" : "0.002"
 }
 

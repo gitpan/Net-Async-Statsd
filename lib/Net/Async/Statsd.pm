@@ -3,7 +3,7 @@ package Net::Async::Statsd;
 use strict;
 use warnings;
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 =head1 NAME
 
@@ -11,7 +11,7 @@ Net::Async::Statsd - asynchronous API for Etsy's statsd protocol
 
 =head1 VERSION
 
-version 0.001
+Version 0.002
 
 =head1 SYNOPSIS
 
