@@ -55,6 +55,7 @@ eval { $v .= pmver('IO::Async','0.62') };
 eval { $v .= pmver('IO::Handle','any version') };
 eval { $v .= pmver('IO::Socket::IP','any version') };
 eval { $v .= pmver('IPC::Open3','any version') };
+eval { $v .= pmver('List::Util','1.38') };
 eval { $v .= pmver('Mixin::Event::Dispatch','1.000') };
 eval { $v .= pmver('Socket','2.000') };
 eval { $v .= pmver('Test::CheckDeps','0.010') };

@@ -16,7 +16,7 @@ Net::Async::Statsd::Bus - event handling object
 
 =head1 VERSION
 
-Version 0.002
+Version 0.003
 
 =head1 DESCRIPTION
 
@@ -38,7 +38,7 @@ L<add_handler_for_event|Mixin::Event::Dispatch/add_handler_for_event>, L<clear_e
 
 =head1 AUTHOR
 
-Tom Molesworth <cpan@entitymodel.com>
+Tom Molesworth <cpan@perlsite.co.uk>
 
 =head1 LICENSE
 

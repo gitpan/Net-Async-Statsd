@@ -1,5 +1,5 @@
 package Net::Async::Statsd::Client;
-$Net::Async::Statsd::Client::VERSION = '0.002';
+$Net::Async::Statsd::Client::VERSION = '0.003';
 use strict;
 use warnings;
 
@@ -11,7 +11,7 @@ Net::Async::Statsd::Client - asynchronous API for Etsy's statsd protocol
 
 =head1 VERSION
 
-Version 0.002
+Version 0.003
 
 =head1 SYNOPSIS
 
@@ -235,12 +235,13 @@ sub queue_stat {
 
 	# Append rate if we're only sampling part of the data
 	$v .= '|@' . $rate if $rate < 1;
-	$self->statsd->then(sub {
+	my $f;
+	$f = $self->statsd->then(sub {
 		# FIXME Someday IO::Async::Socket may support
 		# Futures for UDP send, update this if/when
 		# that happens.
 		shift->send("$k:$v");
-		Future->wrap
+		Future->wrap->on_ready(sub { undef $f });
 	});
 }
 
@@ -363,7 +364,7 @@ __END__
 
 =head1 AUTHOR
 
-Tom Molesworth <cpan@entitymodel.com>
+Tom Molesworth <cpan@perlsite.co.uk>
 
 =head1 LICENSE
 

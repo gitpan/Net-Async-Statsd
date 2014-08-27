@@ -1,5 +1,5 @@
 package Net::Async::Statsd::Bus;
-$Net::Async::Statsd::Bus::VERSION = '0.002';
+$Net::Async::Statsd::Bus::VERSION = '0.003';
 use strict;
 use warnings;
 
@@ -11,7 +11,7 @@ Net::Async::Statsd::Bus - event handling object
 
 =head1 VERSION
 
-Version 0.002
+Version 0.003
 
 =head1 DESCRIPTION
 
@@ -35,7 +35,7 @@ __END__
 
 =head1 AUTHOR
 
-Tom Molesworth <cpan@entitymodel.com>
+Tom Molesworth <cpan@perlsite.co.uk>
 
 =head1 LICENSE
 
