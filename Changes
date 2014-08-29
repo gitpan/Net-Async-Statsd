@@ -1,5 +1,9 @@
 Revision history for Net-Async-Statsd
 
+0.004     2014-08-29 06:16:01+01:00 Europe/London
+	New features:
+	* Support for prefix option in client
+
 0.003     2014-08-27 03:50:57+01:00 Europe/London
 	No new features
 

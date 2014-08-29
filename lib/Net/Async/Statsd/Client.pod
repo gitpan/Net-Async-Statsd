@@ -16,7 +16,7 @@ Net::Async::Statsd::Client - asynchronous API for Etsy's statsd protocol
 
 =head1 VERSION
 
-Version 0.003
+Version 0.004
 
 =head1 SYNOPSIS
 
@@ -143,6 +143,8 @@ Accepts the following named parameters:
 =item * port - the UDP port to send messages to
 
 =item * default_rate - default sampling rate when none is provided for a given call
+
+=item * prefix - string to prepend to any stats we record
 
 =back
 

@@ -10,6 +10,7 @@ README
 SIGNATURE
 cpanfile
 dist.ini
+examples/statsd-server.pl
 lib/Net/Async/Statsd.pm
 lib/Net/Async/Statsd/Bus.pm
 lib/Net/Async/Statsd/Bus.pod

@@ -1,7 +1,7 @@
 
 
 This archive contains the distribution Net-Async-Statsd,
-version 0.003:
+version 0.004:
 
   IO::Async support for statsd/graphite
 

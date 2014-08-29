@@ -1,5 +1,5 @@
 package Net::Async::Statsd::Client;
-$Net::Async::Statsd::Client::VERSION = '0.003';
+$Net::Async::Statsd::Client::VERSION = '0.004';
 use strict;
 use warnings;
 
@@ -11,7 +11,7 @@ Net::Async::Statsd::Client - asynchronous API for Etsy's statsd protocol
 
 =head1 VERSION
 
-Version 0.003
+Version 0.004
 
 =head1 SYNOPSIS
 
@@ -201,13 +201,15 @@ Accepts the following named parameters:
 
 =item * default_rate - default sampling rate when none is provided for a given call
 
+=item * prefix - string to prepend to any stats we record
+
 =back
 
 =cut
 
 sub configure {
 	my ($self, %args) = @_;
-	for (qw(port host default_rate)) {
+	for (qw(port host default_rate prefix)) {
 		$self->{$_} = delete $args{$_} if exists $args{$_};
 	}
 	$self->SUPER::configure(%args);
@@ -233,6 +235,8 @@ sub queue_stat {
 	$rate //= $self->default_rate;
 	return Future->wrap unless $self->sample($rate);
 
+	$k = $self->{prefix} . '.' . $k if exists $self->{prefix};
+
 	# Append rate if we're only sampling part of the data
 	$v .= '|@' . $rate if $rate < 1;
 	my $f;
@@ -241,8 +245,8 @@ sub queue_stat {
 		# Futures for UDP send, update this if/when
 		# that happens.
 		shift->send("$k:$v");
-		Future->wrap->on_ready(sub { undef $f });
-	});
+		Future->wrap
+	})->on_ready(sub { undef $f });
 }
 
 =head2 sample

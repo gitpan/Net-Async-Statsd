@@ -1,5 +1,5 @@
 package Net::Async::Statsd::Bus;
-$Net::Async::Statsd::Bus::VERSION = '0.003';
+$Net::Async::Statsd::Bus::VERSION = '0.004';
 use strict;
 use warnings;
 
@@ -11,7 +11,7 @@ Net::Async::Statsd::Bus - event handling object
 
 =head1 VERSION
 
-Version 0.003
+Version 0.004
 
 =head1 DESCRIPTION
 
